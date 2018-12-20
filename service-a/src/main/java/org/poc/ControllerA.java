@@ -22,7 +22,7 @@ public class ControllerA {
     @GetMapping("/foo")
     public String foo() {
         log.info("Handling request for /foo");
-        String response = restTemplate.getForObject("http://service-b/bar", String.class);
+        String response = restTemplate.getForObject("http://b-service/bar", String.class);
         log.info("Returning response for /foo");
         return response;
     }
