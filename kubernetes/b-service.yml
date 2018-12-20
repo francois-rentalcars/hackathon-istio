@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: b-service
+spec:
+  type: ClusterIP
+  selector:
+    app: b-service
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
